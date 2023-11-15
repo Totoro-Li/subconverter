@@ -1,0 +1,57 @@
+FROM node:17.3.0-alpine3.12
+
+# build minimized
+RUN apk add git g++ build-base linux-headers cmake && \
+    apk add libressl-dev curl-dev rapidjson-dev libevent-dev pcre2-dev yaml-cpp-dev python2 && \
+    git clone --branch v2-maintenance --depth 1 https://github.com/svaarala/duktape && \
+    cd duktape && \
+    python2 -m ensurepip && \
+    pip2 install PyYAML==5.3.1 && \
+    python2 util/dist.py && \
+    cd dist/src && \
+    cc -c -O3 -o duktape.o duktape.c && \
+    cc -c -O3 -o duk_module_node.o -I. ../extras/module-node/duk_module_node.c && \
+    ar cr libduktape.a duktape.o && \
+    ar cr libduktape_module.a duk_module_node.o && \
+    install -m0644 *.a /usr/lib && \
+    install -m0644 duk*.h /usr/include && \
+    install -m0644 ../extras/module-node/duk_module_node.h /usr/include && \
+    cd ../../.. && \
+    rm -rf duktape /usr/lib/python2.7 && \
+    git clone https://github.com/ToruNiina/toml11.git && \
+    mkdir -p toml11/build && \
+    cd toml11/build && \
+    cmake .. -DCMAKE_CXX_STANDARD=11 && \
+    make install && \
+    cd .. && \
+    rm -rf toml11
+
+RUN git clone https://github.com/bellard/quickjs.git && \
+    cd quickjs && \
+    git checkout b5e6289 && \
+    make && make install && \
+    cd .. && \
+    rm -rf quickjs
+
+RUN git clone https://github.com/PerMalmberg/libcron.git --recursive && \
+    mkdir -p libcron/build && \
+    cd libcron/build && \
+    cmake .. -DCMAKE_CXX_STANDARD=11 && \
+    make install && \
+    cd .. && \
+    rm -rf libcron
+
+RUN git clone https://github.com/tindy2013/subconverter --depth=1 && \
+    cd subconverter && \
+    cmake . && \
+    make -j4 && \
+    mv subconverter base/ && \
+    mv base ../ && \
+    cd .. && \
+    rm -rf subconverter && \
+    apk add pcre2 libcurl yaml-cpp libevent && \
+    apk del git gcc g++ build-base linux-headers cmake libressl-dev curl-dev rapidjson-dev libevent-dev pcre2-dev yaml-cpp-dev python2
+
+# set entry
+WORKDIR /base
+CMD ./subconverter

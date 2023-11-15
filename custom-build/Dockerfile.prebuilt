@@ -1,6 +1,6 @@
 # you can save the files you want to replace to a folder, then copy it into to the docker
 # using the latest build of the official docker
-FROM tindy2013/subconverter:latest
+FROM tindy2013/subconverter:0.8.1
 # assume your files are inside replacements/
 # subconverter folder is located in /base/, which has the same structure as the base/ folder in the repository
 COPY base/ /base
