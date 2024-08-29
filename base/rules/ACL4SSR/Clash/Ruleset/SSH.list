@@ -2,5 +2,6 @@
 # 数量：1条
 DST-PORT,22
 PROCESS-NAME,ssh.exe
-DOMAIN-SUFFIX,access.zhuo.li
+DOMAIN-SUFFIX,zhuo.li
+DOMAIN-SUFFIX,mana.ayakawaii.com
 DOMAIN-SUFFIX,access.ayakawaii.com

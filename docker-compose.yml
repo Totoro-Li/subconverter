@@ -1,0 +1,6 @@
+services:
+  subconverter:
+    image: subconverter-custom:latest
+    restart: always
+    ports:
+      - "25500:25500"
