@@ -1,5 +1,6 @@
 services:
   subconverter:
+    container_name: subconverter
     image: subconverter-custom:latest
     restart: always
     ports:
