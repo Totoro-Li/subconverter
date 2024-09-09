@@ -1,0 +1,6 @@
+# 内容：SSH
+# 数量：1条
+DST-PORT,22
+PROCESS-NAME,ssh.exe
+DOMAIN-SUFFIX,zhuo.li
+DOMAIN-SUFFIX,ayakawaii.com
