@@ -21,6 +21,6 @@ git reset --hard origin/master
 
 cd ..
 
-TARGET_BASE="./base/rules/ACL4SSR"
+TARGET_BASE="./base/rules/ACL4SSR/"
 
-cp -r "$REPO_DIR"/Clash "$TARGET_BASE"/Clash
+cp -r "$REPO_DIR"/Clash/ "$TARGET_BASE"
