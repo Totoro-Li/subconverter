@@ -1,22 +1,26 @@
 #!/bin/bash
 set -xe
+# remove all old deps
+rm -rf curl libcron quickjspp rapidjson toml11 yaml-cpp
+# remove tmp folder
+rm -rf tmp
 
-git clone https://github.com/curl/curl --depth=1 --branch curl-8_8_0
+git clone https://github.com/curl/curl --depth=1 --branch curl-8_4_0
 cd curl
-cmake -DCMAKE_BUILD_TYPE=Release -DCURL_USE_LIBSSH2=OFF -DHTTP_ONLY=ON -DCURL_USE_SCHANNEL=ON -DBUILD_SHARED_LIBS=OFF -DBUILD_CURL_EXE=OFF -DCMAKE_INSTALL_PREFIX="$MINGW_PREFIX" -G "Unix Makefiles" -DHAVE_LIBIDN2=OFF -DCURL_USE_LIBPSL=OFF .
+cmake -DCMAKE_BUILD_TYPE=Debug -DCURL_USE_LIBSSH2=OFF -DHTTP_ONLY=ON -DCURL_USE_SCHANNEL=ON -DBUILD_SHARED_LIBS=OFF -DBUILD_CURL_EXE=OFF -DCMAKE_INSTALL_PREFIX="$MINGW_PREFIX" -G "Unix Makefiles" -DHAVE_LIBIDN2=OFF -DCURL_USE_LIBPSL=OFF .
 make install -j4
 cd ..
 
 git clone https://github.com/jbeder/yaml-cpp --depth=1
 cd yaml-cpp
-cmake -DCMAKE_BUILD_TYPE=Release -DYAML_CPP_BUILD_TESTS=OFF -DYAML_CPP_BUILD_TOOLS=OFF -DCMAKE_INSTALL_PREFIX="$MINGW_PREFIX" -G "Unix Makefiles" .
+cmake -DCMAKE_BUILD_TYPE=Debug -DYAML_CPP_BUILD_TESTS=OFF -DYAML_CPP_BUILD_TOOLS=OFF -DCMAKE_INSTALL_PREFIX="$MINGW_PREFIX" -G "Unix Makefiles" .
 make install -j4
 cd ..
 
 git clone https://github.com/ftk/quickjspp --depth=1
 cd quickjspp
 patch quickjs/quickjs-libc.c -i ../scripts/patches/0001-quickjs-libc-add-realpath-for-Windows.patch
-cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release .
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug .
 make quickjs -j4
 install -d "$MINGW_PREFIX/lib/quickjs/"
 install -m644 quickjs/libquickjs.a "$MINGW_PREFIX/lib/quickjs/"
@@ -28,7 +32,7 @@ cd ..
 git clone https://github.com/PerMalmberg/libcron --depth=1
 cd libcron
 git submodule update --init
-cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$MINGW_PREFIX" .
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX="$MINGW_PREFIX" .
 make libcron install -j4
 cd ..
 
@@ -38,7 +42,7 @@ cmake -DRAPIDJSON_BUILD_DOC=OFF -DRAPIDJSON_BUILD_EXAMPLES=OFF -DRAPIDJSON_BUILD
 make install -j4
 cd ..
 
-git clone https://github.com/ToruNiina/toml11 --branch v3.8.1 --depth=1
+git clone https://github.com/ToruNiina/toml11 --depth=1
 cd toml11
 cmake -DCMAKE_INSTALL_PREFIX="$MINGW_PREFIX" -G "Unix Makefiles" -DCMAKE_CXX_STANDARD=11 .
 make install -j4
@@ -49,9 +53,9 @@ python -m pip install gitpython
 python scripts/update_rules.py -c scripts/rules_config.conf
 
 rm -f C:/Strawberry/perl/bin/pkg-config C:/Strawberry/perl/bin/pkg-config.bat
-cmake -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles" .
+cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" .
 make -j4
 rm subconverter.exe
 # shellcheck disable=SC2046
-g++ $(find CMakeFiles/subconverter.dir/src -name "*.obj") curl/lib/libcurl.a -o base/subconverter.exe -static -lbcrypt -lpcre2-8 -l:quickjs/libquickjs.a -llibcron -lyaml-cpp -liphlpapi -lcrypt32 -lws2_32 -lwsock32 -lz -s
-mv base subconverter
+g++ $(find CMakeFiles/subconverter.dir/src -name "*.obj") curl/lib/libcurl-d.a -o base/subconverter.exe -static -lbcrypt -lpcre2-8 -l:quickjs/libquickjs.a -llibcron -lyaml-cpp -liphlpapi -lcrypt32 -lws2_32 -lwsock32 -lz -s
+cp -rf base subconverter
