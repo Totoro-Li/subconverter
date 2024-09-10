@@ -60,6 +60,10 @@ COPY --from=builder /subconverter/subconverter /usr/bin/
 COPY --from=builder /subconverter/base /base/
 COPY base/ /base
 
+ENV TZ=Africa/Abidjan
+RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime
+RUN echo $TZ > /etc/timezone
+
 # set entry
 WORKDIR /base
 CMD subconverter
