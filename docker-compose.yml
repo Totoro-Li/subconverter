@@ -5,3 +5,5 @@ services:
     restart: always
     ports:
       - "25500:25500"
+    environment:
+      - TZ=Asia/Shanghai
