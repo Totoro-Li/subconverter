@@ -17,9 +17,9 @@ declare -A SUBSCRIPTIONS=(
     ["Arjow80"]="https://subapi.zhuo.li/sub?target=clash&url=https%3A%2F%2Fsub-post-get.zhuo.li%2FHY2.yaml&insert=false&config=config%2FACL4SSR_Online_Overseas.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true"
 )
 
-# Iterate over the array
 for name in "${!SUBSCRIPTIONS[@]}"; do
-    remote_url=${SUBSCRIPTIONS[$name]}
+    # Circumvent strict access policy
+    remote_url=${SUBSCRIPTIONS[$name]//https:\/\/subapi.zhuo.li/http:\/\/localhost:25500}
     worker_url="https://sub-post-get.zhuo.li/${name}.yaml"
 
     # Retrieve the content and directly upload it
