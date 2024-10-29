@@ -4,6 +4,7 @@ cmake-build-debug
 .idea
 base/cache
 ACLSSR/
+local-subscriptions/
 
 # Build files
 /CmakeFiles

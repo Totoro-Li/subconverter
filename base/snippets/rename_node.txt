@@ -1,49 +1,3 @@
-;short names
-;中国@中
-;徐州@徐
-;深圳@深
-;上海@沪
-;广州@穗
-;宁波@甬
-;贵阳@筑
-;武汉@汉
-;南京@宁
-;天津@津
-;北京@京
-;沈阳@沈
-;江苏@苏
-;浙江@浙
-;安徽@皖
-;福建@闽
-;湖南@湘
-;广东@粤
-;海南@琼
-;四川@川
-;贵州@贵
-;云南@云
-;青海@青
-;台湾@台
-;香港@港
-;澳门@澳
-;美国@美
-;英国@英
-;加拿大@加
-;法国@法
-;德国@德
-;瑞士@瑞
-;日本@日
-;韩国@韩
-;芬兰@芬
-;印度@印
-;泰国@泰
-;越南@越
-;新加坡@新
-;意大利@意
-;菲律宾@菲
-;俄罗斯@俄
-;土耳其@土
-
-;times RE
 ; \(?((x|X)?(\d+)(\.?\d+)?)((\s?倍率?)|(x|X))\)?@$1x
 
 -S1(\s|$)@-广$1
@@ -51,78 +5,433 @@
 -E(\s|$)@-沪$1
 -N(\s|$)@-京$1
 
-; short names
-HKG@Hong Kong
-HK@Hong Kong
-JPN@Japan
-JP@Japan
-TWN@Taiwan
-TW@Taiwan
-USA@US
-United States@US
-United Kingdom@UK
-SGP@Singapore
-SG@Singapore
-KR@Korea
-TR@Turkey
-DEU@Germany
-DE@Germany
-
-
-NLD@荷兰
-NL@荷兰
-ESP@西班牙
-Madrid@西班牙
-CAN@加拿大
-TUR@土耳其
-GBR@英国
-RUS@俄罗斯
-POL@波兰
-ISL@冰岛
-DNK@丹麦n
-IND@印度
-FRA@法国
-AUS@澳大利亚
-KOR@韩国
-MO@澳门
-AE@阿联酋
-
-
-Hong Kong@香港
-Japan@日本
-Taiwan@台湾
-US@美国
-UK@英国
-Singapore@新加坡
+; aliases
 狮城@新加坡
-South Korea@韩国
-North Korea@朝鲜
-Korea@韩国
-Germany@德国
-Turkey@土耳其
-Argentina@阿根廷
-India@印度
-Poland@波兰
-Brazil@巴西
-Spain@西班牙
-Malaysia@马来西亚
-Vietnam@越南
-Netherlands@荷兰
-Canada@加拿大
-Chile@智利
-Australia@澳大利亚
-Johannesburg@南非
-Moscow@莫斯科
-Italy@意大利
-Thailand@泰国
-Israel@以色列
-Antarctica@南极洲
-Iceland@冰岛
-Nigeria@尼日利亚
-Ukraine@乌克兰
+
+; short names
+^HKG@香港
+^JPN@日本
+^TWN@台湾
+^SGP@新加坡
+^DEU@德国
+^NLD@荷兰
+^ESP@西班牙
+^CAN@加拿大
+^TUR@土耳其
+^GBR@英国
+^RUS@俄罗斯
+^POL@波兰
+^ISL@冰岛
+^DNK@丹麦
+^IND@印度
+^FRA@法国
+^AUS@澳大利亚
+^KOR@韩国
 
 
+^HK@香港
+^MO@澳门
+^TW@台湾
+^JP@日本
+^KR@韩国
+^KP@朝鲜
+^MN@蒙古
+^VN@越南
+^KH@柬埔寨
+^LA@老挝
+^TH@泰国
+^MM@缅甸
+^PH@菲律宾
+^BN@文莱
+^MY@马来西亚
+^SG@新加坡
+^ID@印尼
+^TL@东帝汶
+^NP@尼泊尔
+^BT@不丹
+^PK@巴基斯坦
+^IN@印度
+^BD@孟加拉国
+^MV@马尔代夫
+^LK@斯里兰卡
+^KZ@哈萨克斯坦
+^KG@吉尔吉斯斯坦
+^TJ@塔吉克斯坦
+^UZ@乌兹别克斯坦
+^TM@土库曼斯坦
+^AF@阿富汗
+^IR@伊朗
+^IQ@伊拉克
+^SY@叙利亚
+^LB@黎巴嫩
+^IL@以色列
+^PS@巴勒斯坦
+^JO@约旦
+^SA@沙特阿拉伯
+^BH@巴林
+^QA@卡塔尔
+^KW@科威特
+^AE@阿联酋
+^OM@阿曼
+^YE@也门
+^GE@格鲁吉亚
+^AM@亚美尼亚
+^AZ@阿塞拜疆
+^TR@土耳其
+^IS@冰岛
+^DK@丹麦
+^NO@挪威
+^SE@瑞典
+^FI@芬兰
+^GB@英国
+^IE@爱尔兰
+^FR@法国
+^MC@摩纳哥
+^NL@荷兰
+^BE@比利时
+^LU@卢森堡
+^DE@德国
+^CH@瑞士
+^LI@列支敦士登
+^PL@波兰
+^CZ@捷克
+^SK@斯洛伐克
+^AT@奥地利
+^HU@匈牙利
+^EE@爱沙尼亚
+^LV@拉脱维亚
+^LT@立陶宛
+^BY@白俄罗斯
+^UA@乌克兰
+^MD@摩尔多瓦
+^RU@俄罗斯
+^PT@葡萄牙
+^ES@西班牙
+^AD@安道尔
+^IT@意大利
+^SM@圣马力诺
+^VA@梵蒂冈
+^MT@马耳他
+^SI@斯洛文尼亚
+^HR@克罗地亚
+^BA@波黑
+^ME@黑山
+^RS@塞尔维亚
+^AL@阿尔巴尼亚
+^MK@北马其顿
+^BG@保加利亚
+^GR@希腊
+^RO@罗马尼亚
+^CY@塞浦路斯
+^EG@埃及
+^LY@利比亚
+^TN@突尼斯
+^DZ@阿尔及利亚
+^MA@摩洛哥
+^NE@尼日尔
+^BF@布基纳法索
+^ML@马里
+^MR@毛里塔尼亚
+^NG@尼日利亚
+^BJ@贝宁
+^TG@多哥
+^GH@加纳
+^CI@科特迪瓦
+^LR@利比里亚
+^SL@塞拉利昂
+^GN@几内亚
+^GW@几内亚比绍
+^SN@塞内加尔
+^GM@冈比亚
+^CV@佛得角
+^TD@乍得
+^CF@中非
+^CM@喀麦隆
+^CD@刚果民主共和国
+^CG@刚果共和国
+^GA@加蓬
+^GQ@赤道几内亚
+^ST@圣多美和普林西比
+^DJ@吉布提
+^SO@索马里
+^ER@厄立特里亚
+^ET@埃塞俄比亚
+^SD@苏丹
+^SS@南苏丹
+^KE@肯尼亚
+^TZ@坦桑尼亚
+^UG@乌干达
+^RW@卢旺达
+^BI@布隆迪
+^SC@塞舌尔
+^AO@安哥拉
+^ZM@赞比亚
+^MW@马拉维
+^MZ@莫桑比克
+^NA@纳米比亚
+^BW@博茨瓦纳
+^ZW@津巴布韦
+^ZA@南非
+^SZ@斯威士兰
+^LS@莱索托
+^MG@马达加斯加
+^MU@毛里求斯
+^KM@科摩罗
+^AU@澳大利亚
+^NZ@新西兰
+^PW@帕劳
+^FM@密克罗尼西亚联邦
+^MH@马绍尔群岛
+^NR@瑙鲁
+^KI@基里巴斯
+^PG@巴布亚新几内亚
+^SB@所罗门群岛
+^VU@瓦努阿图
+^FJ@斐济
+^TV@图瓦卢
+^WS@萨摩亚
+^TO@汤加
+^NU@纽埃
+^CK@库克群岛
+^CA@加拿大
+^US@美国
+^MX@墨西哥
+^GT@危地马拉
+^BZ@伯利兹
+^SV@萨尔瓦多
+^HN@洪都拉斯
+^NI@尼加拉瓜
+^CR@哥斯达黎加
+^PA@巴拿马
+^BS@巴哈马
+^CU@古巴
+^JM@牙买加
+^HT@海地
+^DO@多米尼加共和国
+^KN@圣基茨和尼维斯
+^AG@安提瓜和巴布达
+^DM@多米尼克
+^LC@圣卢西亚
+^BB@巴巴多斯
+^VC@圣文森特和格林纳丁斯
+^GD@格林纳达
+^TT@特立尼达和多巴哥
+^CO@哥伦比亚
+^VE@委内瑞拉
+^GY@圭亚那
+^SR@苏里南
+^EC@厄瓜多尔
+^PE@秘鲁
+^BO@玻利维亚
+^BR@巴西
+^CL@智利
+^AR@阿根廷
+^UY@乌拉圭
+^PY@巴拉圭
+^CW@库拉索
 
+; Full names
+^Hong Kong@香港
+^Macao@澳门
+^Taiwan@台湾
+^Japan@日本
+^North Korea@朝鲜
+^Korea@韩国
+^Mongolia@蒙古
+^Viet Nam@越南
+^Cambodia@柬埔寨
+^Laos@老挝
+^Thailand@泰国
+^Myanmar@缅甸
+^Philippines@菲律宾
+^Brunei@文莱
+^Malaysia@马来西亚
+^Singapore@新加坡
+^Indonesia@印尼
+^Timor-Leste@东帝汶
+^(Nepal|Nepalia)@尼泊尔
+^Bhutan@不丹
+^Pakistan@巴基斯坦
+^India@印度
+^Bangladesh@孟加拉国
+^Maldives@马尔代夫
+^Sri Lanka@斯里兰卡
+^Kazakhstan@哈萨克斯坦
+^Kyrgyzstan@吉尔吉斯斯坦
+^Tajikistan@塔吉克斯坦
+^Uzbekistan@乌兹别克斯坦
+^Turkmenistan@土库曼斯坦
+^Afghanistan@阿富汗
+^Iran@伊朗
+^Iraq@伊拉克
+^Syria@叙利亚
+^Lebanon@黎巴嫩
+^Israel@以色列
+^Palestine@巴勒斯坦
+^Jordan@约旦
+^Saudi Arabia@沙特阿拉伯
+^Bahrain@巴林
+^Qatar@卡塔尔
+^Kuwait@科威特
+^(UAE|Dubai)@阿联酋
+^Oman@阿曼
+^Yemen@也门
+^Georgia@格鲁吉亚
+^Armenia@亚美尼亚
+^Azerbaijan@阿塞拜疆
+^(Turkey|Türkiye)@土耳其
+^Iceland@冰岛
+^Denmark@丹麦
+^Norway@挪威
+^Sweden@瑞典
+^Finland@芬兰
+^UK@英国
+^Ireland@爱尔兰
+^France@法国
+^Monaco@摩纳哥
+^Netherlands@荷兰
+^Belgium@比利时
+^Luxembourg@卢森堡
+^Germany@德国
+^Switzerland@瑞士
+^Liechtenstein@列支敦士登
+^Poland@波兰
+^(Czechia|Czech)@捷克
+^Slovakia@斯洛伐克
+^Austria@奥地利
+^Hungary@匈牙利
+^Estonia@爱沙尼亚
+^Latvia@拉脱维亚
+^Lithuania@立陶宛
+^Belarus@白俄罗斯
+^Ukraine@乌克兰
+^Moldova@摩尔多瓦
+^(Russia|Moscow)@俄罗斯
+^Portugal@葡萄牙
+^(Spain|Madrid)@西班牙
+^Andorra@安道尔
+^(Italy|Italia)@意大利
+^San Marino@圣马力诺
+^Holy See@梵蒂冈
+^Malta@马耳他
+^Slovenia@斯洛文尼亚
+^Croatia@克罗地亚
+^Bosnia@波黑
+^Montenegro@黑山
+^Serbia@塞尔维亚
+^Albania@阿尔巴尼亚
+^North Macedonia@北马其顿
+^Bulgaria@保加利亚
+^Greece@希腊
+^Romania@罗马尼亚
+^Cyprus@塞浦路斯
+^Egypt@埃及
+^Libya@利比亚
+^Tunisia@突尼斯
+^Algeria@阿尔及利亚
+^Morocco@摩洛哥
+^Nigeria@尼日利亚
+^Niger@尼日尔
+^Burkina Faso@布基纳法索
+^Mali@马里
+^Mauritania@毛里塔尼亚
+^Benin@贝宁
+^Togo@多哥
+^Ghana@加纳
+^Côte d'Ivoire@科特迪瓦
+^Liberia@利比里亚
+^Sierra Leone@塞拉利昂
+^Guinea@几内亚
+^Guinea-Bissau@几内亚比绍
+^Senegal@塞内加尔
+^Gambia@冈比亚
+^Cabo Verde@佛得角
+^Chad@乍得
+^Central African Republic@中非
+^Cameroon@喀麦隆
+^The Democratic Republic of the Congo@刚果民主共和国
+^Congo@刚果共和国
+^Gabon@加蓬
+^Equatorial Guinea@赤道几内亚
+^Sao Tome and Principe@圣多美和普林西比
+^Djibouti@吉布提
+^Somalia@索马里
+^Eritrea@厄立特里亚
+^Ethiopia@埃塞俄比亚
+^Sudan@苏丹
+^South Sudan@南苏丹
+^Kenya@肯尼亚
+^The United Republic of Tanzania@坦桑尼亚
+^Uganda@乌干达
+^Rwanda@卢旺达
+^Burundi@布隆迪
+^Seychelles@塞舌尔
+^Angola@安哥拉
+^Zambia@赞比亚
+^Malawi@马拉维
+^Mozambique@莫桑比克
+^Namibia@纳米比亚
+^Botswana@博茨瓦纳
+^Zimbabwe@津巴布韦
+^South Africa@南非
+^Eswatini@斯威士兰
+^Lesotho@莱索托
+^Madagascar@马达加斯加
+^Mauritius@毛里求斯
+^Comoros@科摩罗
+^Australia@澳大利亚
+^New Zealand@新西兰
+^Palau@帕劳
+^Micronesia@密克罗尼西亚联邦
+^Marshall@马绍尔群岛
+^Nauru@瑙鲁
+^Kiribati@基里巴斯
+^Papua New Guinea@巴布亚新几内亚
+^Solomon Islands@所罗门群岛
+^Vanuatu@瓦努阿图
+^Fiji@斐济
+^Tuvalu@图瓦卢
+^Samoa@萨摩亚
+^Tonga@汤加
+^Niue@纽埃
+^Cook Islands@库克群岛
+^Canada@加拿大
+^USA@美国
+^Mexico@墨西哥
+^Guatemala@危地马拉
+^Belize@伯利兹
+^El Salvador@萨尔瓦多
+^Honduras@洪都拉斯
+^Nicaragua@尼加拉瓜
+^Costa Rica@哥斯达黎加
+^Panama@巴拿马
+^Bahamas@巴哈马
+^Cuba@古巴
+^Jamaica@牙买加
+^Haiti@海地
+^Dominican Republic@多米尼加共和国
+^Saint Kitts and Nevis@圣基茨和尼维斯
+^Antigua and Barbuda@安提瓜和巴布达
+^Dominica@多米尼克
+^Saint Lucia@圣卢西亚
+^Barbados@巴巴多斯
+^Saint Vincent and the Grenadines@圣文森特和格林纳丁斯
+^Grenada@格林纳达
+^Trinidad and Tobago@特立尼达和多巴哥
+^Colombia@哥伦比亚
+^Venezuela@委内瑞拉
+^Guyana@圭亚那
+^Suriname@苏里南
+^Ecuador@厄瓜多尔
+^Peru@秘鲁
+^Bolivia@玻利维亚
+^Brazil@巴西
+^Chile@智利
+^Argentina@阿根廷
+^Uruguay@乌拉圭
+^Paraguay@巴拉圭
+^Curaçao@库拉索
+^Antarctica@南极
 
 ; Emoji
 ; (.*)AC(.*)@🇦🇨 $1$2$3
@@ -135,7 +444,6 @@ Ukraine@乌克兰
 (.*)(瑞士|苏黎世|Switzerland)(.*)@🇨🇭 $1$2$3
 (.*)(DE|Germany|德国|法兰克福|德)(.*)@🇩🇪 $1$2$3
 (.*)(丹麦)(.*)@🇩🇰 $1$2$3
-; (.*)ES(.*)@🇪🇸 $1$2$3
 (.*)EU(.*)@🇪🇺 $1$2$3
 (.*)(Finland|芬兰|赫尔辛基)(.*)@🇫🇮 $1$2$3
 (.*)(FR|France|法国|巴黎)(.*)@🇫🇷 $1$2$3
