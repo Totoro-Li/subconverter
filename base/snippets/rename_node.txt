@@ -431,6 +431,7 @@
 ^Uruguay@乌拉圭
 ^Paraguay@巴拉圭
 ^Curaçao@库拉索
+^Greenland@格陵兰
 ^Antarctica@南极
 
 ; Emoji
