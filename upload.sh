@@ -9,7 +9,7 @@ USER_AGENT="clash-verge/v1.7.7"
 declare -A SUBSCRIPTIONS=(
     # ["Base"]="https://suc2.sntp.io/api/v1/client/subscribe?token=6c04b13144bb1c0ce2e268a16e08ea8f"
     ["MESL"]="https://911tg3rs.com/api/v1/client/subscribe?token=cd2547b1709a90266a0babce2ce0def0"
-    ["ImmTelecom"]="https://gwodkg.sbs/?L1N1YnNjcmlwdGlvbi9TaGFkb3dSb2NrZXRJbXBvcnRTZXJ2aWNlP3Q9c2lwMDAyJnNpZD0xMzI5NyZ0b2tlbj1PcXNqUGRncW42WSZtbT0yMzM4MyYzYTEzNzgzNGNlODA0ODZmOWQ0YjljNg=="
+    ["ImmTelecom"]="https://ferqwo.sbs/?L1N1YnNjcmlwdGlvbi9DbGFzaD9zaWQ9MTMyOTcmdG9rZW49T3FzalBkZ3FuNlkmbW09MjMzODMmZWVjYTc5OThjMmM2NGU0ZDgyYzcyY2U0OTZi"
     # ["ACA"]="https://api.acaisbest.online/api/v1/client/subscribe?token=9fbc297af6436d89f41adacb19dda114"
     ["Arjow80"]="https://subapi.zhuo.li/sub?target=clash&url=https%3A%2F%2Fsub-post-get.zhuo.li%2FHY2.yaml&insert=false&config=config%2FACL4SSR_Online_Overseas.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true"
     ["Austria_Taiwan"]="https://subapi.zhuo.li/sub?target=clash&url=https%3A%2F%2Fsub-post-get.zhuo.li%2FMESL.yaml&insert=false&config=config%2FAUX_Austria_Taiwan.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true"
