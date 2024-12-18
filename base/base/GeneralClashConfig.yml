@@ -76,7 +76,7 @@ experimental:
 
 dns:
   enable: true
-  # ipv6: true  # Might not work if node doesn't support ipv6
+  ipv6: true  # Might not work if node doesn't support ipv6
   prefer-h3: true
   listen: :1053
   use-hosts: true

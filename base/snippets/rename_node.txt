@@ -285,7 +285,7 @@
 ^Norway@挪威
 ^Sweden@瑞典
 ^Finland@芬兰
-^UK@英国
+^(UK|United Kingdom)@英国
 ^Ireland@爱尔兰
 ^France@法国
 ^Monaco@摩纳哥
@@ -373,7 +373,7 @@
 ^Namibia@纳米比亚
 ^Botswana@博茨瓦纳
 ^Zimbabwe@津巴布韦
-^South Africa@南非
+^(South Africa|Johannesburg)@南非
 ^Eswatini@斯威士兰
 ^Lesotho@莱索托
 ^Madagascar@马达加斯加
@@ -396,7 +396,7 @@
 ^Niue@纽埃
 ^Cook Islands@库克群岛
 ^Canada@加拿大
-^USA@美国
+^(USA|United States)@美国
 ^Mexico@墨西哥
 ^Guatemala@危地马拉
 ^Belize@伯利兹

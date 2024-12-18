@@ -7,18 +7,17 @@ USER_AGENT="clash-verge/v1.7.7"
 
 # Declare an associative array for name and remote_url pairs
 declare -A SUBSCRIPTIONS=(
-    ["Base"]="https://911tg3rs.com/api/v1/client/subscribe?token=9de16fd49474dbf3990ff87e6cb3a33b"
-    # ["MESL"]="https://911tg3rs.com/api/v1/client/subscribe?token=9de16fd49474dbf3990ff87e6cb3a33b"
-    ["ImmTelecom"]="https://ferqwo.sbs/?L1N1YnNjcmlwdGlvbi9DbGFzaD9zaWQ9MTMyOTcmdG9rZW49T3FzalBkZ3FuNlkmbW09MjMzODMmZWVjYTc5OThjMmM2NGU0ZDgyYzcyY2U0OTZi"
-    # ["ACA"]="https://api.acaisbest.online/api/v1/client/subscribe?token=9fbc297af6436d89f41adacb19dda114"
-    ["Arjow80"]="https://subapi.zhuo.li/sub?target=clash&url=https%3A%2F%2Fsub-post-get.zhuo.li%2FHY2.yaml&insert=false&config=config%2FACL4SSR_Online_Overseas.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true"
-    ["Austria_Taiwan"]="https://subapi.zhuo.li/sub?target=clash&url=https%3A%2F%2Fsub-post-get.zhuo.li%2FBase.yaml&insert=false&config=config%2FAUX_Austria_Taiwan.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true"
-    ["Ue9HlB3"]="https://subapi.zhuo.li/sub?target=clash&url=https%3A%2F%2Fsub-post-get.zhuo.li%2FBase.yaml%7Chttps%3A%2F%2Fsub-post-get.zhuo.li%2FYTOO.yaml%7Chttps%3A%2F%2Fsub-post-get.zhuo.li%2FImmTelecom.yaml%7Chttps%3A%2F%2Fsub-post-get.zhuo.li%2FHY2.yaml&insert=false&config=config%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true"
-    ["xlVNVUL"]="https://subapi.zhuo.li/sub?target=clash&url=https%3A%2F%2Fsub-post-get.zhuo.li%2FAustria_Taiwan.yaml%7Chttps%3A%2F%2Fsub-post-get.zhuo.li%2FHY2.yaml&insert=false&config=config%2FACL4SSR_Online_Mini.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true"
+    ["Base"]="https://911tg3rs.com/api/v1/client/subscribe?token=73204e05be6761f3cee1c95bf2bb5b7c"
+    ["WD"]="https://wd-red.com/subscribe/njvpka-psmcucs3"
+    ["ACA"]="https://frieren.acaisbest.online/api/v1/client/subscribe?token=08b698049827c28ca624c94ef35ed094"
+    # ["Arjow80"]="https://subapi.zhuo.li/sub?target=clash&url=https%3A%2F%2Fsub-post-get.zhuo.li%2FHY2.yaml&insert=false&config=config%2FACL4SSR_Online_Overseas.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true"
+    # ["Austria_Taiwan"]="https://subapi.zhuo.li/sub?target=clash&url=https%3A%2F%2Fsub-post-get.zhuo.li%2FBase.yaml&insert=false&config=config%2FAUX_Austria_Taiwan.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true"
+    ["ZB9V7waPO0yC2Xon2G"]="https://subapi.zhuo.li/sub?target=clash&url=https%3A%2F%2Fsub-post-get.zhuo.li%2FBase.yaml%7Chttps%3A%2F%2Fsub-post-get.zhuo.li%2FWD.yaml%7Chttps%3A%2F%2Fsub-post-get.zhuo.li%2FACA.yaml&insert=false&config=config%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true"
+    ["xlVNVUL"]="https://subapi.zhuo.li/sub?target=clash&url=https%3A%2F%2Fsub-post-get.zhuo.li%2FWD.yaml&insert=false&config=config%2FACL4SSR_Online_Mini.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true"
 )
 
 # Indexed array of keys in desired order
-ORDERED_KEYS=("Base" "ImmTelecom" "Arjow80" "Austria_Taiwan" "Ue9HlB3" "xlVNVUL")
+ORDERED_KEYS=("WD" "Base" "ACA" "xlVNVUL" "ZB9V7waPO0yC2Xon2G")
 
 declare -A LOCAL_FILES=(
     ["WARP"]="./local-subscriptions/WARP.yaml" 

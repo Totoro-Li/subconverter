@@ -2,3 +2,5 @@ DOMAIN-SUFFIX,chat.zhuo.li
 DOMAIN-KEYWORD,deepseek
 DOMAIN-KEYWORD,elevenlabs
 DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,sora.com
+PROCESS-NAME,ChatGPT.exe
